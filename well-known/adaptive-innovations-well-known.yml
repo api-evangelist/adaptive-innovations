@@ -1,0 +1,116 @@
+generated: '2026-09-07'
+method: probed
+source: >-
+  Direct HTTPS probes of the named /.well-known/ path list on every host this record knows:
+  the registrable domain adaptive.co and www, the product API host api.adaptive.co (found via
+  DNS, not advertised), and the sibling clinical brand adaptivehh.com.
+name: Adaptive Innovations Well-Known Discovery Probe
+note: >-
+  No /.well-known/ document is served on any Adaptive host. Every path on adaptive.co,
+  www.adaptive.co and adaptivehh.com returns 404 with the site's HTML 404 page; every path on
+  api.adaptive.co returns the FastAPI 404 JSON body {"detail":"Not Found"}. Because nothing
+  returned a 200 carrying a real document, NO WellKnown or SecurityTxt pointer is emitted in
+  apis.yml — this file records a measured absence, not a presence.
+hosts:
+- host: adaptive.co
+  role: registrable-domain
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+- host: www.adaptive.co
+  role: www
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: api.adaptive.co
+  role: product-api-host
+  note: >-
+    FastAPI application behind Istio/Envoy (server: istio-envoy, x-app-version header). Not
+    advertised anywhere on adaptive.co; discovered by DNS resolution. /health returns 200
+    {"status":"healthy"}. /openapi.json, /docs and /redoc all return HTTP 401 {"detail":"Not
+    authorized"} — the OpenAPI document exists but is not public.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/mcp.json
+    status: 404
+    file: null
+- host: adaptivehh.com
+  role: sibling-brand
+  note: Adaptive Home Health, the Medicare-certified clinical delivery arm. Marketing site only.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

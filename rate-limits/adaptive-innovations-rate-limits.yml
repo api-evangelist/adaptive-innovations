@@ -1,0 +1,26 @@
+generated: '2026-09-07'
+method: probed
+source: https://api.adaptive.co/health
+name: Adaptive Innovations Rate Limits
+limit_count: 0
+note: >-
+  No rate limits are documented, because no public API is documented. Adaptive publishes no
+  developer portal, API reference, or terms of API use. The one API host that exists,
+  api.adaptive.co, is the private backend of Adaptive's own iOS/Android app; its OpenAPI document
+  and both doc renderers are auth-gated (HTTP 401), so no published limit table is reachable. No
+  rate-limit response headers were observed on the single anonymous 200 available (/health):
+  the response carries only date, content-type, server, x-process-time, x-app-version,
+  x-datadog-trace-id, x-request-id and x-envoy-upstream-service-time. Recorded as an honest zero.
+headers_observed: []
+status_on_exhaustion: null
+evidence:
+- url: https://api.adaptive.co/health
+  status: 200
+  note: >-
+    Only anonymous 200 on the host. No X-RateLimit-*, RateLimit-* or Retry-After header present.
+- url: https://api.adaptive.co/openapi.json
+  status: 401
+  note: '{"detail":"Not authorized"} — spec exists but is not public.'
+- url: https://api.adaptive.co/docs
+  status: 401
+rate_limits: []

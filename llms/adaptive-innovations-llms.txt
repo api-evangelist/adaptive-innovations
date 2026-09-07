@@ -1,0 +1,78 @@
+# Adaptive Innovations
+
+> Adaptive Innovations Co. is an AI-native home health provider headquartered in New York, NY, with
+> clinical operations centered in Texas. It pairs clinicians in the home with an internally built
+> "AI operating system" that automates medical intake, scheduling, charting, and compliance billing.
+> Care is delivered under the Adaptive Home Health brand. Adaptive publishes NO public API, no
+> developer portal, and no machine-readable contract.
+
+<!--
+generated: 2026-09-07
+method: generated
+source: apis.yml + probes of adaptive.co, api.adaptive.co and adaptivehh.com on 2026-09-07
+generated-by: API Evangelist enrichment pipeline. This file is a third-party summary, not a
+document published by Adaptive Innovations. Adaptive serves no /llms.txt of its own
+(https://adaptive.co/llms.txt -> 404).
+-->
+
+## For agents: there is no API to call
+
+Adaptive Innovations is a care-delivery company, not an API vendor. As of 2026-09-07:
+
+- No developer portal, API reference, getting-started guide, SDK, CLI, or Postman collection.
+- No OpenAPI, AsyncAPI, GraphQL SDL, JSON Schema, or Protobuf published anywhere.
+- No MCP server, no A2A agent card, no /llms.txt, no /.well-known/ document on any host.
+- No webhooks, no status page, no changelog, no public rate limits, no pricing or plans.
+
+One API host exists but is not a product surface: `https://api.adaptive.co` runs a FastAPI
+application (behind Istio/Envoy) that serves Adaptive's own iOS and Android app. It is not linked
+from adaptive.co and was found by DNS resolution. `GET /health` returns 200; `GET /openapi.json`,
+`GET /docs` and `GET /redoc` all return HTTP 401 `{"detail":"Not authorized"}`. The OpenAPI document
+therefore exists but is private. Do not attempt to call it — it is a first-party backend for
+patients and clinicians, not an integration surface.
+
+## Company
+
+- Legal name: Adaptive Innovations Co.
+- Founded: 2025
+- Headquarters: New York, NY, United States (clinical operations in Texas; hiring across AZ, IL, NC, NV, PA, TX)
+- Founders: Alex Wendland (co-CEO), Logan Stinson (co-CEO), Hunter Stinson (COO), Ryan Tolsma (CTO)
+- Funding: $60M total — a Seed round and a $50M Series A announced June 2026, led by Felicis and
+  Bain Capital Ventures, with Optum Ventures, BoxGroup, Conviction, SV Angel, Sunflower Capital,
+  Constellation and Dorm Room Fund participating.
+- Reported scale: 100,000+ patient visits delivered, 500+ referring healthcare organizations,
+  ~500 clinical staff, 4.9% rehospitalization rate vs a 12.9% national average.
+
+## Links
+
+- Website: https://adaptive.co/
+- Blog: https://adaptive.co/blog/
+- Blog RSS: https://adaptive.co/rss.xml
+- Careers: https://adaptive.co/careers/
+- Job board: https://jobs.ashbyhq.com/adaptive-innovations
+- App privacy policy: https://adaptive.co/app/privacy
+- Clinical brand (Adaptive Home Health): https://adaptivehh.com/
+- LinkedIn: https://www.linkedin.com/company/adaptiveinnovations/
+- X: https://x.com/joinadaptive
+
+## Posts
+
+- Engineering healthcare abundance (2026-06-02, Ryan Tolsma, CTO):
+  https://adaptive.co/blog/engineering-healthcare-abundance/
+- Introducing Adaptive Innovations and $60M raised in Series A and Seed:
+  https://adaptive.co/blog/introducing-adaptive-innovations/
+
+## Regulatory context
+
+Adaptive Home Health is Medicare-certified and accepts Medicare, the VA, and 50+ commercial
+insurance plans. Adaptive's own app privacy policy states that health information is handled "in
+accordance with applicable law, including HIPAA where it applies." No trust center, no published
+SOC 2 / ISO 27001 / HITRUST certification, and no security.txt or vulnerability disclosure policy
+were found on any Adaptive host.
+
+## Contact
+
+For anything about this profile — a correction, a re-score, or removal — open an issue on
+https://github.com/api-evangelist/adaptive-innovations or email info@apievangelist.com.
+For anything about Adaptive's services, contact Adaptive directly; API Evangelist does not operate
+or support them.

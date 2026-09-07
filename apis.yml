@@ -1,17 +1,36 @@
 aid: adaptive-innovations
 name: Adaptive Innovations
-description: 'Adaptive Innovations is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Adaptive Innovations Co. is an AI-native home health provider headquartered in New York, NY, with
+  operations centered in Texas. Founded in 2025 by Alex Wendland and Logan Stinson (co-CEOs), Hunter
+  Stinson (COO) and Ryan Tolsma (CTO), the company pairs clinicians in the home with an internally
+  built "AI operating system" that automates medical intake, scheduling, charting, and compliance
+  billing. It delivers care under the Adaptive Home Health brand (adaptivehh.com), a Medicare-certified
+  agency that reports 100,000+ patient visits, 500+ referring healthcare organizations and roughly 500
+  clinical staff. Adaptive raised $60M across a Seed and a $50M Series A (June 2026) led by Felicis and
+  Bain Capital Ventures, with Optum Ventures, BoxGroup, Conviction, SV Angel, Sunflower Capital,
+  Constellation and Dorm Room Fund participating. Its software is operated internally and shipped to
+  patients and clinicians as an iOS/Android app; as of this profile Adaptive publishes no public
+  developer program, API reference, or machine-readable contract.
 url: https://raw.githubusercontent.com/api-evangelist/adaptive-innovations/refs/heads/main/apis.yml
+image: https://adaptive.co/og-image.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
+x-tier: profiled
 x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-07'
 modified: '2026-09-07'
 tags:
 - Company
+- Healthcare
+- Home Health
+- Health Care Services
+- Artificial Intelligence
+- Clinical Operations
+- Medicare
+- Care Delivery
+position: Producing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/adaptive-innovations-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/adaptive-innovations_stock/
+  url: https://adaptive.co/
+- type: Blog
+  url: https://adaptive.co/blog/
+- type: BlogRSS
+  url: https://adaptive.co/rss.xml
+- type: PrivacyPolicy
+  url: https://adaptive.co/app/privacy
+- type: Careers
+  url: https://adaptive.co/careers/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/adaptiveinnovations/
+- type: Twitter
+  url: https://x.com/joinadaptive
+- type: LLMsTxt
+  url: llms/adaptive-innovations-llms.txt
+- type: Plans
+  url: plans/adaptive-innovations-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/adaptive-innovations-rate-limits.yml
+x-enrichment:
+  date: '2026-09-07'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Adaptive Innovations is a care-delivery company whose software ships only as its own iOS/Android
+    app: adaptive.co is a three-page site (home, blog, careers) with no developer portal, and the one
+    API host that exists, api.adaptive.co, is an unadvertised FastAPI backend for that app whose
+    /openapi.json, /docs and /redoc all answer HTTP 401 "Not authorized".
+  evidence:
+  - url: https://api.adaptive.co/openapi.json
+    status: 401
+  - url: https://api.adaptive.co/health
+    status: 200
+  - url: https://adaptive.co/sitemap-0.xml
+    status: 200
+  - url: https://adaptive.co/llms.txt
+    status: 404
+  - url: https://adaptive.co/.well-known/api-catalog
+    status: 404
+  - url: https://adaptivehh.com/openapi.json
+    status: 404
+  checked: '2026-09-07'

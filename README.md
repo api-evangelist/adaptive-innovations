@@ -64,5 +64,29 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adaptive Innovations is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/adaptive-innovations_stock/
+Adaptive Innovations Co. is an AI-native home health provider headquartered in New York, NY, with
+clinical operations centered in Texas. Founded in 2025 by Alex Wendland and Logan Stinson (co-CEOs),
+Hunter Stinson (COO) and Ryan Tolsma (CTO), it pairs clinicians in the home with an internally built
+"AI operating system" that automates medical intake, scheduling, charting, and compliance billing.
+Care is delivered under the Medicare-certified Adaptive Home Health brand. The company raised $60M
+across a Seed and a $50M Series A (June 2026) led by Felicis and Bain Capital Ventures.
+
+## Coverage
+
+**This company publishes no public API.** As of 2026-09-07 there is no developer portal, API
+reference, SDK, CLI, Postman collection, webhook catalog, status page, changelog, or published
+pricing, and no OpenAPI / AsyncAPI / GraphQL / MCP / A2A artifact on any Adaptive host. Every
+`/.well-known/` path probed on `adaptive.co`, `www.adaptive.co`, `api.adaptive.co` and
+`adaptivehh.com` returned 404.
+
+One API host exists but is not a product surface: `api.adaptive.co` runs a FastAPI application
+serving Adaptive's own iOS/Android app. It is not linked from the website and was found by DNS
+resolution. `/health` returns 200; `/openapi.json`, `/docs` and `/redoc` return HTTP 401
+`{"detail":"Not authorized"}` — the contract exists, but privately.
+
+## Links
+
+- https://adaptive.co/
+- https://adaptive.co/blog/
+- https://adaptive.co/careers/
+- https://adaptivehh.com/ (Adaptive Home Health, the clinical delivery brand)

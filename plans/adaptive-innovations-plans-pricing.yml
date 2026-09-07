@@ -1,0 +1,24 @@
+generated: '2026-09-07'
+method: searched
+source: https://adaptive.co/
+name: Adaptive Innovations Plans and Pricing
+plan_count: 0
+currency: null
+note: >-
+  Adaptive Innovations publishes no plans, tiers, or pricing of any kind. It is not a SaaS vendor:
+  it is a licensed home health provider that bills Medicare, the VA and roughly 50 commercial
+  insurance plans for clinical services delivered under the Adaptive Home Health brand, and its
+  software is operated internally rather than sold. The adaptive.co site is three pages (home, blog,
+  careers) with no pricing page, no plans page, and no "contact sales" API motion; adaptivehh.com
+  lists accepted insurances rather than prices. Recorded as an honest zero, not an unchecked field.
+evidence:
+- url: https://adaptive.co/pricing
+  status: 404
+- url: https://adaptive.co/
+  status: 200
+  note: Sitemap lists only /, /blog/, /blog/<2 posts>, /careers/ — no pricing surface exists.
+- url: https://adaptivehh.com/
+  status: 200
+  note: >-
+    "50+ Insurance Plans + Medicare and VA Accepted" — payer coverage, not a published price list.
+plans: []
