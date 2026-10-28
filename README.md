@@ -64,29 +64,93 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adaptive Innovations Co. is an AI-native home health provider headquartered in New York, NY, with
-clinical operations centered in Texas. Founded in 2025 by Alex Wendland and Logan Stinson (co-CEOs),
-Hunter Stinson (COO) and Ryan Tolsma (CTO), it pairs clinicians in the home with an internally built
-"AI operating system" that automates medical intake, scheduling, charting, and compliance billing.
-Care is delivered under the Medicare-certified Adaptive Home Health brand. The company raised $60M
-across a Seed and a $50M Series A (June 2026) led by Felicis and Bain Capital Ventures.
+Adaptive Innovations Co. is an AI-native home health provider headquartered in New York, NY, with operations centered in Texas. Founded in 2025 by Alex Wendland and Logan Stinson (co-CEOs), Hunter Stinson (COO) and Ryan Tolsma (CTO), the company pairs clinicians in the home with an internally built "AI operating system" that automates medical intake, scheduling, charting, and compliance billing. It delivers care under the Adaptive Home Health brand (adaptivehh.com), a Medicare-certified agency that reports 100,000+ patient visits, 500+ referring healthcare organizations and roughly 500 clinical staff. Adaptive raised $60M across a Seed and a $50M Series A (June 2026) led by Felicis and Bain Capital Ventures, with Optum Ventures, BoxGroup, Conviction, SV Angel, Sunflower Capital, Constellation and Dorm Room Fund participating. Its software is operated internally and shipped to patients and clinicians as an iOS/Android app; as of this profile Adaptive publishes no public developer program, API reference, or machine-readable contract.
 
-## Coverage
+**Areas:** Company · Healthcare · Home Health · Healthcare Services · Artificial Intelligence · Clinical Operations · Medicare · Care Delivery
 
-**This company publishes no public API.** As of 2026-09-07 there is no developer portal, API
-reference, SDK, CLI, Postman collection, webhook catalog, status page, changelog, or published
-pricing, and no OpenAPI / AsyncAPI / GraphQL / MCP / A2A artifact on any Adaptive host. Every
-`/.well-known/` path probed on `adaptive.co`, `www.adaptive.co`, `api.adaptive.co` and
-`adaptivehh.com` returned 404.
+## Adaptive Innovations on APIs.io
 
-One API host exists but is not a product surface: `api.adaptive.co` runs a FastAPI application
-serving Adaptive's own iOS/Android app. It is not linked from the website and was found by DNS
-resolution. `/health` returns 200; `/openapi.json`, `/docs` and `/redoc` return HTTP 401
-`{"detail":"Not authorized"}` — the contract exists, but privately.
+Everything profiled for Adaptive Innovations is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/adaptive-innovations/](https://apis.io/providers/adaptive-innovations/)** — or go straight to one of the APIs or properties below.
 
-## Links
+### Published properties
 
-- https://adaptive.co/
-- https://adaptive.co/blog/
-- https://adaptive.co/careers/
-- https://adaptivehh.com/ (Adaptive Home Health, the clinical delivery brand)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Adaptive Innovations Domain Security](https://apis.io/security/adaptive-innovations/adaptive-innovations-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Adaptive Innovations Plans Pricing](https://apis.io/plans/adaptive-innovations/adaptive-innovations-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Adaptive Innovations Rate Limits](https://apis.io/rate-limits/adaptive-innovations/adaptive-innovations-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://adaptive.co/)
+- [Blog](https://adaptive.co/blog/)
+- [Privacy policy](https://adaptive.co/app/privacy)
+
+## API Evangelist rating
+
+**Kin Score 7.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 10.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 7.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adaptive-innovations/](https://apis.io/providers/adaptive-innovations/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Adaptive Innovations: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/adaptive-innovations/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
